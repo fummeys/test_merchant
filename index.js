@@ -1,30 +1,34 @@
-class car {
-    color = 'green'
-    model = 'toyota'
-    enginetype
-    mile
-    constructor(eng, m){
-        this.enginetype = eng
-        this.mile = m
-    }
-    revEngine(times){
-        for(let i = 0; i < times; i++){
-            console.log(`zoom!! ${i+1} times`)
+class Pet {
+    taxonomy = 'animal'
+    sleep(q, name){
+        for(let i = 0;i < q; i++){
+            console.log(`${name} is sleeping for ${q} hour`)
         }
-    }
-    drivecar(q){
-        this.revEngine(q)
-        this.mile = this.mile + q
     }
 }
 
-let mydreamcar = new car('petrol',10)
-let fawascar = new car('diesel',25)
-mydreamcar.color = 'white'
+class Dog extends Pet {
+    group = 'mamal'
+    sound(q){
+        for(let i = 0;i < q; i++){
+            console.log(`${i +1} woof!`)
+        }
+    }
+}
+class Cat extends Pet{
+    group = 'mamal'
+    sound(q){
+        for(let i = 0;i < q; i++){
+            console.log(`${i +1} meoooow!`)
+        }
+    }
+}
 
-mydreamcar.drivecar(7)
 
-// mydreamcar.revEngine(3)
-// fawascar.revEngine(10)
+let bingo = new Dog()
+let susu = new Cat()
+// bingo.sound(2)
+// susu.sound(1)
+susu.sleep(2,'susu')
 
-console.log(mydreamcar, fawascar)
+console.log(bingo,susu)

@@ -1,13 +1,12 @@
-setTimeout(()=>{
-    // let myform = document.getElementsByClassName('form')
-    let myform = document.getElementById('form')
-    myform.style.backgroundColor = 'blue'
-    // console.log(myform)
-},3000)
-
-const reload = ()=>{
-    // window.location.href = '/'
-    console.log('working')
+const getvalue = ()=>{
+    let item = document.getElementById('my-input').value
+    document.getElementById('para').innerText = document.getElementById('para').innerText + item
+    // console.log(item)
 }
 
-setInterval(reload, 10000)
+const checkInput = (lpo)=>{
+    console.log(lpo)
+    if(lpo !== null && lpo.length > 5){
+        document.getElementById('submit').removeAttribute('disabled')
+    }
+}

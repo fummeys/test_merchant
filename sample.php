@@ -12,13 +12,13 @@
         <div class="row justify-content-center align-content-center" style="height: 500px;">
             <div class="col text-center">
                 <form method="POST" action="http://localhost:4000/payment/default">
-                    <input type="hidden" name="merchant" value="79CC54EA3E246" />
-                    <input type="hidden" name="merchant_id" value="4" />
-                    <input type="hidden" name="currency_id" value="1" required />
-                    <input class="form-control my-2" type="text" name="item_name" value="" required placeholder="Item name"/>
-                    <input class="form-control my-2" type="text" name="order_no" value="" required placeholder="order number"/>
-                    <input class="form-control my-2" type="number" name="amount" value="" required placeholder="price"/>
-                    <button class="btn btn-outline-warning" type="submit">Pay now!</button>
+                    <input type="hidden" name="order" id="result_order" value="#"/>
+                    <input type="hidden" name="merchant" id="result_merchant" value="#"/>
+                    <input type="hidden" name="merchant_id" id="result_merchant_id" value="#"/>
+                    <input type="hidden" name="item_name" id="result_item_name" value="Testing payment"/>
+                    <input type="hidden" name="custom" id="result_custom" value="comment"/>
+                    <input type="hidden" name="amount" id="result_amount" value="10"/>
+                    <button class="btn btn-primary btn-lg" type="submit">Test payment form</button>
                 </form>
             </div>
         </div>
